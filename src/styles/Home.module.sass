@@ -1,0 +1,107 @@
+@import colors
+@import breakpoints
+
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    img
+        margin-right: 1rem
+
+    h1
+        color: $hard-violet
+    h2
+        color: $black
+    
+    @include mobile
+        h1
+            font-size: 1.5rem
+        h2
+            font-size: 1.25rem
+
+.body
+    margin-top: 2rem
+
+    .info
+        display: flex
+        justify-content: space-between
+        
+        @include mobile
+            flex-direction: column
+            justify-content: center
+
+            > div
+                margin-bottom: 0.5rem
+                text-align: center
+
+        h3, p
+            color: $black
+
+        input
+            padding: 4px
+            border: solid 1px $violet
+            font-size: 1.1rem
+            color: $black
+
+        input::placeholder
+            color: $gray
+
+        input:focus
+            outline: solid 2px $hard-violet
+
+        .pagination, .filter
+            display: flex
+            justify-content: center
+            align-items: center
+
+            button
+                padding: 4px 6px
+                margin: 0 10px
+                border: solid 1px $violet
+                border-radius: 4px
+                background: none
+                cursor: pointer
+
+    .currencies
+        margin-top: 1rem
+        width: 100%
+        text-align: center
+        border-collapse: separate
+        border-spacing: 0 8px
+
+        th
+            color: $black
+        td
+            background-color: $hard-violet
+            color: $white
+            padding: 10px 50px
+
+            @include mobile
+                padding: 5px
+                
+        td:first-child
+            border-top-left-radius: 4px
+            border-bottom-left-radius: 4px
+        td:first-child:hover
+            font-weight: bolder  
+
+        td:last-child
+            border-top-right-radius: 4px
+            border-bottom-right-radius: 4px
+
+            > div
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: $violet
+                border-radius: 2px
+                padding: 3px
+                min-width: 70px
+
+        .positive
+            color: $green
+            font-weight: bold
+
+        .negative
+            color: $red

@@ -1,0 +1,63 @@
+@import colors
+@import breakpoints
+
+.details
+    > div
+        min-width: 600px
+
+        @include mobile
+            min-width: unset
+            width: 100%
+            
+    h1
+        color: $black
+        text-align: center
+    
+    .info
+        margin-top: 1rem
+
+.bottom
+    display: flex
+    margin-top: 1rem
+
+    @include mobile
+        flex-direction: column
+
+    > div
+        flex: 1
+
+        @include mobile
+            margin-top: 1rem
+
+        h4
+            margin-bottom: 0.5rem
+
+    .exchange
+        input
+            padding: 4px
+            border: solid 1px $violet
+            color: $black
+            width: 70px
+            margin-right: 5px
+            text-align: right
+
+        input::placeholder
+            color: $gray
+
+        input:focus
+            outline: solid 2px $hard-violet
+
+    .trends 
+        > div
+            display: flex
+            align-items: center
+
+.back
+    background-color: $violet
+    margin: auto
+    border: solid 2px $black
+    padding: 4px 6px
+    width: 100px
+    margin-top: 2rem
+    text-align: center
+    border-radius: 4px

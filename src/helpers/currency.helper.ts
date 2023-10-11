@@ -1,0 +1,1 @@
+export const calculateHasPositiveTrend = (variation: string): boolean => Number(variation) > 0
